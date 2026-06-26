@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Online</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-store"></i> Toko Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Belanja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Keranjang
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order-history.html">Pesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Selamat datang, <span id="userName"></span>!</h3>
+                        <p class="card-text">Silakan jelajahi produk kami dan berbelanja sekarang.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Produk Unggulan</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row" id="featuredProducts">
+                            <!-- Products will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Menu Cepat</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="shop.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-shopping-bags"></i> Belanja Produk
+                        </a>
+                        <a href="cart.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-shopping-cart"></i> Keranjang Belanja
+                        </a>
+                        <a href="order-history.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-history"></i> Riwayat Pesanan
+                        </a>
+                        <a href="profile.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-user"></i> Profil Saya
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Informasi Akun</h6>
+                        <p class="mb-2"><strong>Email:</strong> <span id="userEmail"></span></p>
+                        <p class="mb-0"><strong>Bergabung:</strong> <span id="joinDate"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

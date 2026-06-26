@@ -1,0 +1,54 @@
+# Jekyll Configuration for GitHub Pages
+
+# Site Settings
+title: Toko Online - E-Commerce Application
+description: Full-stack e-commerce web application built with Node.js, Express, and SQLite
+author: alfialviana35-ops
+url: https://alfialviana35-ops.github.io/WEB
+
+# Build Settings
+theme: jekyll-theme-primer
+remote_theme: pages-themes/primer@v0.6.0
+
+# Exclude these directories and files from the build
+exclude:
+  - backend/
+  - frontend/
+  - node_modules/
+  - .git/
+  - .gitignore
+  - package.json
+  - package-lock.json
+  - .env
+  - .env.example
+  - *.log
+  - .nojekyll
+
+# Include files
+include:
+  - .nojekyll
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Set collections_dir to null to avoid issues
+collections_dir: null
+
+# Permalink style
+permalink: /:title/
+
+# Show excerpts on index page
+show_excerpts: true

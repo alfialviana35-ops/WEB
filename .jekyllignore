@@ -1,0 +1,8 @@
+# Ignore dependency directories and Jekyll cache so the Pages build doesn't parse installed packages
+node_modules
+backend/node_modules
+**/node_modules
+# Optional caches and bundler directories
+.jekyll-cache
+.bundle
+vendor/bundle
